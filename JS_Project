@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="kanban.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Kanban Board</h1>
+    </header>
+
+    <main id="kanbanBoard">
+            <section class="swimlane toDo">
+                <h2>to Do</h2>
+            </section>
+            <section class="swimlane inProgress">
+                <h2>in Progress</h2>
+            </section>
+            <section class="swimlane done">
+                <h2>Done</h2>
+            </section>
+            <section class="swimlane hold">
+                <h2>Hold</h2>
+            </section>
+    </main>
+
+    <button onclick="sortCards()" class="button">Sort Cards</button>
+
+    <script src="kaban.js"></script>
+
+    <footer>
+        <p>© 2025 Nikki Minark — Full Stack Developer Learner</p>
+    </footer>
+
+</body>
+
+</html>
