@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="content">
+        hello world
+    </p>
+
+    <button id="button">click me</button>
+
+    <script>
+
+        const randomHex = () => {
+            return Math.floor(Math.random() * 256).toString(16);
+        }
+
+        const randomColor = () => {
+            const r = randomHex();
+            const g = randomHex();
+            const b = randomHex();
+
+            const colour = `#${r}${g}${b}`;
+            return colour;
+
+
+        }
+
+
+        const content = document.querySelector('#content');
+        content.innerText = 'ดีจ้า';
+
+        for (let i = 0; i < 5; i++) {
+            const strong = document.createElement('strong');
+            strong.innerText = 'ตัวหนา';
+
+            content.appendChild(strong);
+
+        }
+
+        document.querySelectorAll('strong').forEach((element) => {
+            element.style.backgroundColor = randomColor();
+        })
+
+        
+
+        const button = document.querySelector('#button');
+        // button.style.backgroundColor = 'red';
+
+        
+
+        
+
+        const changeColor = () => {
+            button.style.backgroundColor = randomColor();
+        }
+        button.addEventListener('click', changeColor)
+        button.addEventListener('mouseover', () => {
+            button.style.color = randomColor();
+        })
+
+        
+
+
+    </script>
+</body>
+
+</html>

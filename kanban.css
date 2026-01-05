@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #5307ce, #ffd6a5);
+    font-family: "Indie Flower", cursive;
+}
+
+header h1 {
+    text-align: center;
+    border-bottom: 15px solid #1a2634;
+    padding-bottom: 20px;
+    font-size: 4em;
+    color: antiquewhite;
+}
+
+
+#kanbanBoard {
+    display: flex;
+    column-gap: 24px;
+    padding: 48px;
+    width: 100%;
+    height: 70%;
+    font-size: 1.5em;
+}
+
+#kanbanBoard h2 {
+    text-align: center;
+    border-bottom: 2px solid #1a2634;
+    padding-bottom: 20px;
+
+}
+
+.swimlane {
+    border: 2px solid #1a2634;
+    background-color: azure;
+    border-radius: 15px;
+    flex-basis: 1;
+    flex-shrink: 0;
+    flex-grow: 5;
+}
+
+.card {
+    padding: 10px;
+    margin: 7px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+
+
+    .toDo & {
+        background-color: rgb(238, 238, 57);
+    }
+
+    .inProgress & {
+        background-color: rgb(10, 233, 10);
+    }
+
+    .done & {
+        background-color: black;
+        color: white;
+    }
+
+    .hold & {
+        background-color: rgb(243, 9, 9);
+        color: white;
+    }
+}
+
+#dragged {
+    background-color: rgb(245, 8, 146);
+}
+
+
+
+/* ==== ปุ่มจาก chatGPT ==== */
+.button {
+    background-color: rgb(230, 10, 113);
+    /* สีม่วงสด */
+    color: antiquewhite;
+    /* สีตัวอักษร */
+    border: none;
+    /* ไม่มีขอบ */
+    border-radius: 15px;
+    /* มุมโค้งนิด ๆ */
+    padding: 30px 50px;
+    /* ขนาดปุ่ม */
+    font-size: 2em;
+    /* ขนาดตัวอักษร */
+    font-family: "Indie Flower", cursive;
+    font-weight: 500;
+    /* น้ำหนักตัวอักษร */
+    cursor: pointer;
+    /* เป็นรูปมือเวลา hover */
+    transition: all 0.3s ease;
+    /* ลื่นเวลา hover */
+}
+
+/* เอฟเฟกต์ตอนเอาเมาส์ไปชี้ */
+.button:hover {
+    background-color: #0ae28f;
+    /* สีอ่อนลงนิดหน่อย */
+    transform: translateY(-2px);
+    /* ขยับขึ้นเล็กน้อย */
+    box-shadow: 0 4px 8px rgba(240, 3, 54, 0.842);
+    /* เงา */
+}
+
+/* เอฟเฟกต์ตอนคลิก */
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(224, 55, 55, 0.2);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    color: #fcfcfc;
+    background-color: #000;
+    padding: 10px;
+    border-top: 10px solid #1a2634;
+    font-size: 1em;
+}

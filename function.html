@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const findGrade = (score) => {
+            if(score > 100 || score <0){
+                
+                return ('คะแนนผิดพลาด')
+               
+            } if (score >=80 ){
+                return 'A';
+            } if (score >=70){
+                return 'B';
+            } if (score >=60){
+                return 'C';
+            } if (score >=50){
+                return 'D';
+            } 
+            return 'F'
+
+        }
+
+        findGrade(51);
+
+        const studentA = findGrade(150);
+        console.log('stu A: ', studentA);
+
+        const studentB = findGrade(55);
+        console.log('stu B: ', studentB);
+
+        const studentC = findGrade(78);
+        console.log('stu C: ', studentC);
+
+        const studentD = findGrade(45);
+        console.log('stu D: ', studentD);
+
+        // function sawasdee(name) {
+        //     if (name === undefined){
+        //         console.log('ดีจ้า');
+        //     } else {
+        //         console.log(`ดีจ้า คุณ${name}`);
+        //     }
+            
+        // }
+
+        // const sawasdee = (name) => {
+
+        //     let suffix = '' ;
+
+        //     if (name !== undefined){
+        //         suffix = (` คุณ${name}`)
+        //     }
+
+        //     return `ดีจ้า${suffix}`;
+            
+        // }
+
+        // const s1 = sawasdee();
+        // const s2 = sawasdee('เรมี่');
+
+        // console.log(s1,'&', s2);
+        
+    </script>
+</body>
+</html>
